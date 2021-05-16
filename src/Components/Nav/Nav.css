@@ -1,8 +1,0 @@
-.Nav__Items {
-  /* background-color: aqua; */
-  border: 1px solid black;
-  display: flex;
-  flex-direction: row;
-  text-decoration: none;
-  list-style: none;
-}

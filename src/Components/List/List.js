@@ -22,7 +22,7 @@ class List extends Component {
 
   render() {
     return (
-      <ul>
+      <ul className=''>
         {this.state.furniture &&
           this.state.furniture.map((furniture, id) => {
             return (
@@ -33,6 +33,7 @@ class List extends Component {
                 img={furniture.fur_img}
                 price={furniture.fur_price}
               />
+              
             );
           })}
       </ul>
