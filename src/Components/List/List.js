@@ -24,10 +24,10 @@ class List extends Component {
     return (
       <ul>
         {this.state.furniture &&
-          this.state.furniture.map((furniture, idx) => {
+          this.state.furniture.map((furniture, id) => {
             return (
               <Item
-                id={furniture.id}
+                key={furniture.id}
                 name={furniture.fur_name}
                 type={furniture.fur_type}
                 img={furniture.fur_img}
