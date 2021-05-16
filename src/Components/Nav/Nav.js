@@ -1,13 +1,25 @@
-import { Container } from "@material-ui/core";
+
 import React, { Component } from "react";
 import Item from "../Item";
-import Container from "@material-ui/core";
+import  Container  from "@material-ui/core/Container";
 import "./Nav.css";
 
 export default class Nav extends Component {
   render() {
-    return <Container className="Nav__Items">
+    return (
+      <div>
+      <Container maxWidth='lg'>
+  
+      </Container>;
 
-    </Container>;
+
+      </div>
+    ) 
+  
+      
+      
+      
+    
   }
+  
 }

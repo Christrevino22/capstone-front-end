@@ -9,7 +9,7 @@ class Item extends Component {
 
   render() {
     return (
-      <li>
+      <li className="item__card">
         <div>
           <h2>{this.props.name}</h2>
           <h5>{this.props.type}</h5>
