@@ -1,37 +1,37 @@
-import React, { Component } from "react";
+import { useState, useEffect } from "react";
 import Item from "../Item/index";
 import "./List.css";
 
-class List extends Component {
-  constructor(props) {
-    super(props);
+const List = () => {
+  const [furniture, setFurniture] = useState([])
+    
 
-    this.state = {
-      furniture: [],
-    };
-  }
 
-  componentDidMount() {
+  useEffect(()=> {
     fetch("https://cap-app.vercel.app/furniture")
       .then((response) => response.json())
-      .then((data) => this.setState({ furniture: data }));
-  }
+      .then((data) => setFurniture(data)
+  })
 
-  componentDidUpdate() {
-    console.log(this.state.furniture);
-  }
+  // componentDidMount() {
+  //   fetch("https://cap-app.vercel.app/furniture")
+  //     .then((response) => response.json())
+  //     .then((data) => this.setState({ furniture: data }));
+  // }
+
+  
 
   render() {
     return (
       <ul className="item__card">
-        {this.state.furniture &&
-          this.state.furniture.map((furniture, id) => {
+        {furniture &&
+          furniture.map((furniture, id) => {
             return (
               <Item
                 key={furniture.id}
+                img={furniture.fur_img}
                 name={furniture.fur_name}
                 type={furniture.fur_type}
-                img={furniture.fur_img}
                 price={furniture.fur_price}
               />
             );
